@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8">
+		<title>Derpy Thing That Looks Like Shit</title>
+		<link rel="stylesheet/less" type="text/css" href="../static/index.less"/>
+		<script src="//cdnjs.cloudflare.com/ajax/libs/less.js/3.8.1/less.min.js"></script>
+		<script src="../static/index.js"></script>
+	</head>
+	<body>
+		<div class="content">
+			<ul class="list">
+				<li>
+					<form>
+						<input class="search" type="text" name="key" title="SearchInput" value="{{ key }}">
+						<input class="search_button" type="submit" title="Search">
+					</form>
+					<div>
+						Found: <span class="amt">{{ songs|length }} songs</span>
+					</div>
+				</li>
+				{% for song in songs %}
+					<li onclick="doAlert('{{ song.path }}')" class="{{ song.ext }}">
+						{{ song.song }}
+					</li>
+				{% endfor %}
+			</ul>
+		</div>
+	</body>
+</html>

@@ -1,0 +1,43 @@
+.list {
+	list-style-type: none !important;
+	li {
+		list-style-type: none;
+		margin: 10px;
+		padding: 10px;
+		border: 2px solid gray;
+		
+		&.mp3::after {
+			float: right;
+			content: ".mp3";
+			color: green;
+		}
+		
+		&.flac::after {
+			float: right;
+			content: ".flac";
+			color: green;
+		}
+		
+		&.wav::after {
+			float: right;
+			content: ".wav";
+			color: green;
+		}
+	}
+}
+
+.search {
+	width: 50%;
+	height: auto;
+}
+
+.search_button {
+	
+}
+
+* {
+	background-color: #303030;
+	color: #b0b0b0;
+	font-size: 16px;
+	font-family: 'Roboto', Arial, sans-serif;
+}
